@@ -1,0 +1,12 @@
+{
+  "schedule": "*/30 * * * * *",
+  "relayerUrl": "http://localhost:8787",
+  "verificationMode": "attested",
+  "evms": [
+    {
+      "chainName": "ethereum-testnet-sepolia",
+      "chaipayAddress": "0x0000000000000000000000000000000000000000",
+      "gasLimit": "300000"
+    }
+  ]
+}

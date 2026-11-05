@@ -1,0 +1,7 @@
+# Chainlink CRE project for the ChaiPay payout verifier.
+# Whitechain (chain 1874) isn't a CRE network yet, so the workflow simulates against Ethereum Sepolia.
+# When Whitechain is added, point chain-name at it and set ChaiPay.verifier to its KeystoneForwarder.
+staging-settings:
+  rpcs:
+    - chain-name: ethereum-testnet-sepolia
+      url: https://ethereum-sepolia-rpc.publicnode.com

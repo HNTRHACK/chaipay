@@ -1,0 +1,25 @@
+{
+  "name": "chaipay-relayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "node src/index.js",
+    "vendor": "esbuild ../scripts/vendor-entry.js --bundle --format=esm --minify --outfile=../app/vendor/viem.js && cp node_modules/jsqr/dist/jsQR.js ../app/vendor/jsQR.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "jsqr": "^1.4.0",
+    "viem": "^2.57.16"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ChaiPay",
+  "short_name": "ChaiPay",
+  "description": "Scan any UPI QR and pay in USDT. The shop gets rupees.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f4",
+  "theme_color": "#1E4D3B"
+}
