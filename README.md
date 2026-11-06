@@ -47,7 +47,26 @@ sequenceDiagram
 | Escrow contract | [`contracts/src/ChaiPay.sol`](contracts/src/ChaiPay.sol) | Internal USDT balances, EIP-712 pay/withdraw intents (EOA + ERC-1271), LP claims, CRE `onReport` receiver, refunds |
 | Relayer | [`relayer/src/index.js`](relayer/src/index.js) | Submits signed intents and pays gas; quotes INR→USDT; LP API; refund sweeper |
 | Phone app | [`app/`](app/) | Device wallet, QR scanner, confirm, live receipt, cash partner dashboard |
+| 3D world | [`world/`](world/) | Chai Nagar: walk around, buy from stalls, watch each payment fly through escrow |
 | CRE workflow | [`cre/chaipay-verifier/`](cre/chaipay-verifier/) | Independently verifies UPI payouts and writes a DON-signed report |
+
+### Chai Nagar: the 3D world
+
+![Chai Nagar title](docs/chai-nagar-title.png)
+
+Open **`/world/`** (served by the relayer) to walk around **Chai Nagar**, a tiny hand-inked planet
+where every street stall takes USDT. Talk to Raju, tap **Pay ₹20**, and watch your payment travel
+as an envelope: from you to the **escrow tower** (USDT locked onchain), to **Sharma Ji** the cash
+partner (who pays Raju over UPI), and finally to Raju's stall once the payout is verified. Every
+step is driven by the real order status from the contract, and the world shares the same device
+wallet and balance as the phone app.
+
+![Paying for chai in Chai Nagar](docs/chai-nagar-paid.png)
+
+Built with three.js: toon shading, a Sobel ink-outline post-process with hand-drawn wobble, and
+spherical walking with a follow camera. Source in [`world/`](world/); `npm run build` there writes
+to `app/world/`. Controls: WASD / arrows, Shift to run, E to talk; on phones, a joystick and a
+Talk button. For a live demo, put a real UPI ID on a stall with `/world/?raju=friend@okaxis`.
 
 ### Payer sees zero crypto steps
 

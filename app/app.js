@@ -99,6 +99,10 @@ async function renderHome() {
       <h2>Pay any shop that takes UPI</h2>
       <p class="muted small" style="margin-top:6px">Scan their QR. You pay in USDT, they receive rupees in their bank like any UPI payment. No gas, no seed phrase.</p>
     </section>
+    <a class="panel world-link" href="/world/">
+      <h2>Walk around Chai Nagar</h2>
+      <p class="muted small" style="margin-top:6px">A tiny 3D town where every stall takes your USDT. Same wallet, same balance.</p>
+    </a>
     <div class="dock"><button class="btn" id="scan">Scan to pay</button></div>`;
   document.getElementById("scan").onclick = openScanner;
 

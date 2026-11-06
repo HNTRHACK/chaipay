@@ -199,3 +199,7 @@ dialog::backdrop { background: rgba(0,0,0,.85); }
 @media (prefers-reduced-motion: reduce) {
   .step.active .dot, .paid-banner { animation: none; }
 }
+
+.world-link { display: block; color: inherit; text-decoration: none; background: var(--leaf); color: var(--on-leaf); border-color: var(--leaf); }
+.world-link .muted { color: inherit; opacity: 0.85; }
+.world-link h2::after { content: ""; }
